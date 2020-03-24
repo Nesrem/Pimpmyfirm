@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Pimp my firm</string>
+    <string name="Noeud101">
+        "Ah bonjour, patron. Ravi de vous voir reprendre les rênes de LA COMPAGNIE. Vous verrez que nous avons grand besoin de notre expertise. Je suis le directeur marketing, et je vais avoir le plaisir de vous faire visiter les locaux de votre entreprise."
+    </string>
+    <string name="Noeud102">
+        "LA COMPAGNIE est une entreprise leader dans son domaine. Nous fabriquons des Produits haut de gamme à destination des Consommateurs."
+    </string>
+    <string name="Noeud103">
+        "Les Produits sont fabriqués dans notre Département Technique. Voici la Directrice Technique en charge de ce département."
+    </string>
+    <string name="Noeud104">
+        Bonjour Patron ! Ravi de vous avoir parmi nous !
+    </string>
+</resources>
