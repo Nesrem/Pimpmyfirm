@@ -12,4 +12,88 @@
     <string name="Noeud104">
         Bonjour Patron ! Ravi de vous avoir parmi nous !
     </string>
+    <string name="Noeud105">
+        Chaque mois vous aurez à charge de définir le budget du Département Technique. Ce budget, associé à la productivité des salariés, déterminera le nombre de Produits que l’entreprise sera à même de produire ce mois-ci.
+    </string>
+    <string name="Noeud106">
+        J’attire votre attention sur le fait que les Produits ont une durée de vie infini. Il est donc possible de stocker le trop plein de production pour le mois suivant.
+    </string>
+    <string name="Noeud107">
+        Attention tout de même ! Stockés les Produits à un coût. Veiller à ne pas faire de stocks trop important afin de ne pas plomber les budgets de l’entreprise.
+    </string>
+    <string name="Noeud108">
+        Le second pôle de l’entreprise est le Département Technique. C’est ce département qui se chargera de la vente et de la distribution de nos produits. En tant que directeur c’est moi qui serais votre interlocuteur pour ce pôle.
+    </string>
+    <string name="Noeud109">
+        Chaque mois vous aurez à charge de définir le budget du département Marketing ainsi que le prix de vente des Produits. Un fort budget marketing et des prix de vente concurrentiels permettront de vendre davantage de produit.
+    </string>
+    <string name="Noeud110">
+        A l’inverse, des prix de ventes trop importants ne permettront pas d’écouler tous les stocks. Prenez bien cela en compte lors du choix de ces paramètres.
+    </string>
+    <string name="Noeud111">
+        Je vous propose maintenant de rejoindre la salle de réunion où vous pourrez faire la connaissance du Représentant des Actionnaires.
+    </string>
+    <string name="Noeud112">
+        Bonjour cher Dirigeant. C’est un plaisir de faire votre connaissance.
+    </string>
+    <string name="Noeud113">
+        En tant que Représentant des actionnaires, c’est moi qui à charge de vous soutenir dans la gestion de l’entreprise et de veiller à ce que nos investissements soit intelligemment utilisé.
+    </string>
+    <string name="Noeud114">
+        Votre objectif en tant que Dirigeant et de veiller à la pleine croissance de l’entreprise et à ce que les dividendes perçus soit suffisants pour motiver de futurs investissements.
+    </string>
+    <string name="Noeud115">
+        Nous avons grand besoin de vos talents en ces temps difficiles. J’espère de tout cœur que vous serez à la hauteur de la tâche que nous vous avons confiée.
+    </string>
+    <string name="Noeud116">
+        Passons maintenant à la Salle de Pause. Nous allons pouvoir y rencontrer la Déléguée Syndical.
+    </string>
+    <string name="Noeud117">
+        Bonjour Patron. C’est avec moi que vous pourrez échanger sur le Bonheur des Salariés.
+    </string>
+    <string name="Noeud118">
+        Il est important pour une entreprise de conserver un dialogue sain avec ses employés. La Déléguée Syndicale est là pour faire le lien entre vous et les Salariés.
+    </string>
+    <string name="Noeud119">
+        Il est important de garder à l’esprit deux indicateurs fondamentaux lorsque l’on veut gérer efficacement une entreprise : le Bonheur des Salariés et la Productivité des Salariés.
+    </string>
+    <string name="Noeud120">
+        Le Bonheur peut être augmenté par un cadre de travail agréable et des horaires de travail aménagés. Ne pas le faire descendre trop bas permet d’éviter des incidents défavorables au bon fonctionnement de LA COMPAGNIE.
+    </string>
+    <string name="Noeud121">
+        La productivité peut être augmentée par une organisation efficace du travail où par l’achat de matériel à fort potentiel de rentabilité. Il est intéressant de le garder le plus possible afin de produire plus de produits sans augmenter le budget Technique.
+    </string>
+    <string name="Noeud122">
+        Puisque tout semble clair pour vous je vous propose de commencer dès maintenant. Vous pouvez cliquer le bouton en haut à droite afin de fixer les budgets du mois prochain.
+    </string>
+    <string name="Noeud123">
+        Bravo ! Vous venez de fixer les budgets pour le premier mois de la première année. Il ne reste plus qu’à attendre la fin du mois et analyser les résultats.
+    </string>
+    <string name="Noeud124">
+        Je plaisante bien sûr ! Haha. Il reste quelques décisions importantes à prendre d’ici à la fin du mois.
+    </string>
+    <string name="Noeud125">
+        En re-analysant les bilans du mois précédent il s’avère qu’il nous reste quelques 100 000 euros que nous n’avons pas encore investis. Nous pourrions les utiliser pour acheter de nouvelles fournitures pour l’entreprise. Que devrions-nous en faire ?
+    </string>
+    <string name="Noeud126">
+        Fort bien. Nous organiserons donc un afterwork.
+    </string>
+    <string name="Noeud127">
+        Fort bien. Nous allons investir dans de nouvelles machines.
+    </string>
+    <string name="Noeud128">
+        Fort bien. Nous allons investir dans des chaises plus confortables.!
+    </string>
+    <string name="Noeud129">
+        Les résultats du premier mois de la première année sont tombés (comme le temps passe vite lorsque l’on travaille !). Voici le bilan de l’entreprise :
+    </string>
+    <string name="Noeud130">
+        Félicitation ! Nous avons fait un bénéfice de : Une fois retiré les dividendes cela nous fait donc…. Le budget du mois prochain sera donc de :
+    </string>
+    <string name="Noeud131">
+        Félicitations pour vos premiers résultats. Cela est très encourageant. Nous sommes désormais convaincus que nous avons fait le bon choix en vous confiant les rênes de LA COMPAGNIE.
+    </string>
+    <string name="Noeud132">
+        Vos premiers résultats sont bien en dessous des objectifs de l’entreprise. Nous espérons que vous saurez redressez la barre les mois suivants.
+    </string>
 </resources>
