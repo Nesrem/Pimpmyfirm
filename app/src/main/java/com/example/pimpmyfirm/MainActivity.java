@@ -16,9 +16,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bouton_next = null;
     private TextView nom_personnage = null;
     private Noeud Noeud_en_cours = null;
+    private Choix Choix_en_cours = null;
     private Noeud[] tableau_noeud1 = null;
     private Choix[] tableau_choix1 = null;
     ChoixBDD ChoixBDD = new ChoixBDD(this);
+
+    //On définit les boutons qui serviront aux choix
+    private Button bouton_choix1 = null;
+    private Button bouton_choix2 = null;
+    private Button bouton_choix3 = null;
+    private Button bouton_choix4 = null;
+    private Button[] liste_boutons_choix = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +36,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         nom_personnage = layout.findViewById(R.id.nom_personnage);
         texte_du_noeud_en_cours = layout.findViewById(R.id.texte_du_noeud_en_cours);
         bouton_next = layout.findViewById(R.id.bouton_next);
+        bouton_choix1 = layout.findViewById(R.id.bouton_choix1);
+        bouton_choix2 = layout.findViewById(R.id.bouton_choix2);
+        bouton_choix3 = layout.findViewById(R.id.bouton_choix3);
+        bouton_choix4 = layout.findViewById(R.id.bouton_choix4);
+        liste_boutons_choix = new Button[]{bouton_choix1,bouton_choix2, bouton_choix3, bouton_choix4};
         layout.setBackgroundResource(R.drawable.fond);
 
         Choix Choix101 = new Choix(101,102,"Visiter les locaux (tutoriel)");
@@ -85,21 +98,96 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         //initialisation
-        Noeud_en_cours = Noeud101;
+        Noeud_en_cours = Noeud001;
         bouton_next.setText("Next");
         texte_du_noeud_en_cours.setText(Noeud_en_cours.getTexte());
         nom_personnage.setText(Noeud_en_cours.getInterlocuteur());
+        layout.setBackgroundResource(Noeud_en_cours.getImage());
         setContentView(layout);
+
+        // On désaffiche les boutons. Ils seront affichés quand on aura un choix à faire
+        for(int i =0;i<liste_boutons_choix.length;i++){
+            liste_boutons_choix[i].setVisibility(View.INVISIBLE);
+            liste_boutons_choix[i].setOnClickListener(this);
+        }
         bouton_next.setOnClickListener(this);
+
     }
     @Override
     public void onClick(View v) {
+        // Si on a cliquez sur continuer
         if (v.getId() == R.id.bouton_next) {
-            int t = Noeud_en_cours.getNoeud_suivant();
+            // Si il n'y a pas de choix à faire :
             Noeud_en_cours = ChoixBDD.getNoeudWithID(Noeud_en_cours.getNoeud_suivant());
+            if (Noeud_en_cours.getChoix()[1] == 0) {
+                texte_du_noeud_en_cours.setText(Noeud_en_cours.getTexte());
+                nom_personnage.setText(Noeud_en_cours.getInterlocuteur());
+                layout.setBackgroundResource(Noeud_en_cours.getImage());
+                setContentView(layout);
+            } else {
+                // Sinon cela signifie que le joueur doit selectionner un choix
+                // On parcourt la liste des choix et on affiche les boutons correspondants
+                for (int i = 0; i < Noeud_en_cours.getChoix().length; i++) {
+                    if (Noeud_en_cours.getChoix()[i] != 0) {
+                        liste_boutons_choix[i].setVisibility(View.VISIBLE);
+                        Choix_en_cours = ChoixBDD.getChoixWithID(Noeud_en_cours.getChoix()[i]);
+                        liste_boutons_choix[i].setText(Choix_en_cours.getNom_du_choix());
+                    }
+                }
+                bouton_next.setVisibility(View.GONE);
+                texte_du_noeud_en_cours.setText(Noeud_en_cours.getTexte());
+                nom_personnage.setText(Noeud_en_cours.getInterlocuteur());
+                layout.setBackgroundResource(Noeud_en_cours.getImage());
+                setContentView(layout);
+            }
+        }
+        // Doublons de code à supprimer ici
+        if (v.getId() == R.id.bouton_choix1 ){
+            bouton_next.setVisibility(View.VISIBLE);
+            Choix_en_cours = ChoixBDD.getChoixWithID(Noeud_en_cours.getChoix()[0]);
+            Noeud_en_cours = ChoixBDD.getNoeudWithID(Choix_en_cours.getNumero_du_noeud());
             texte_du_noeud_en_cours.setText(Noeud_en_cours.getTexte());
             nom_personnage.setText(Noeud_en_cours.getInterlocuteur());
             layout.setBackgroundResource(Noeud_en_cours.getImage());
+            for(int i =0;i<liste_boutons_choix.length;i++){
+                liste_boutons_choix[i].setVisibility(View.INVISIBLE);
+            }
+            setContentView(layout);
+        }
+        if (v.getId() == R.id.bouton_choix2 ){
+            bouton_next.setVisibility(View.VISIBLE);
+            Choix_en_cours = ChoixBDD.getChoixWithID(Noeud_en_cours.getChoix()[1]);
+            Noeud_en_cours = ChoixBDD.getNoeudWithID(Choix_en_cours.getNumero_du_noeud());
+            texte_du_noeud_en_cours.setText(Noeud_en_cours.getTexte());
+            nom_personnage.setText(Noeud_en_cours.getInterlocuteur());
+            layout.setBackgroundResource(Noeud_en_cours.getImage());
+            for(int i =0;i<liste_boutons_choix.length;i++){
+                liste_boutons_choix[i].setVisibility(View.INVISIBLE);
+            }
+            setContentView(layout);
+        }
+        if (v.getId() == R.id.bouton_choix3 ){
+            bouton_next.setVisibility(View.VISIBLE);
+            Choix_en_cours = ChoixBDD.getChoixWithID(Noeud_en_cours.getChoix()[2]);
+            Noeud_en_cours = ChoixBDD.getNoeudWithID(Choix_en_cours.getNumero_du_noeud());
+            texte_du_noeud_en_cours.setText(Noeud_en_cours.getTexte());
+            nom_personnage.setText(Noeud_en_cours.getInterlocuteur());
+            layout.setBackgroundResource(Noeud_en_cours.getImage());
+            for(int i =0;i<liste_boutons_choix.length;i++){
+                liste_boutons_choix[i].setVisibility(View.INVISIBLE);
+            }
+            setContentView(layout);
+        }
+        if (v.getId() == R.id.bouton_choix4 ){
+            bouton_next.setVisibility(View.VISIBLE);
+            Choix_en_cours = ChoixBDD.getChoixWithID(Noeud_en_cours.getChoix()[3]);
+            Noeud_en_cours = ChoixBDD.getNoeudWithID(Choix_en_cours.getNumero_du_noeud());
+            texte_du_noeud_en_cours.setText(Noeud_en_cours.getTexte());
+            nom_personnage.setText(Noeud_en_cours.getInterlocuteur());
+            layout.setBackgroundResource(Noeud_en_cours.getImage());
+            for(int i =0;i<liste_boutons_choix.length;i++){
+                liste_boutons_choix[i].setVisibility(View.INVISIBLE);
+            }
             setContentView(layout);
         }
     }
